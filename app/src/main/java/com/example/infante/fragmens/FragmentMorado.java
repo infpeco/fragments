@@ -7,19 +7,17 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
-import android.widget.Toast;
 
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link FragmentVerde.OnFragmentInteractionListener} interface
+ * {@link FragmentMorado.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link FragmentVerde#newInstance} factory method to
+ * Use the {@link FragmentMorado#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class FragmentVerde extends Fragment {
+public class FragmentMorado extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -29,12 +27,9 @@ public class FragmentVerde extends Fragment {
     private String mParam1;
     private String mParam2;
 
-    Button btn_verde;
-    View vista;
-
     private OnFragmentInteractionListener mListener;
 
-    public FragmentVerde() {
+    public FragmentMorado() {
         // Required empty public constructor
     }
 
@@ -44,11 +39,11 @@ public class FragmentVerde extends Fragment {
      *
      * @param param1 Parameter 1.
      * @param param2 Parameter 2.
-     * @return A new instance of fragment FragmentVerde.
+     * @return A new instance of fragment FragmentMorado.
      */
     // TODO: Rename and change types and number of parameters
-    public static FragmentVerde newInstance(String param1, String param2) {
-        FragmentVerde fragment = new FragmentVerde();
+    public static FragmentMorado newInstance(String param1, String param2) {
+        FragmentMorado fragment = new FragmentMorado();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         args.putString(ARG_PARAM2, param2);
@@ -69,18 +64,7 @@ public class FragmentVerde extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-
-        vista = inflater.inflate(R.layout.fragment_fragment_verde, container, false);
-
-        btn_verde = vista.findViewById(R.id.btn_verde);
-
-        btn_verde.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(getContext(), "Puncha aqui", Toast.LENGTH_SHORT).show();
-            }
-        });
-        return vista;
+        return inflater.inflate(R.layout.fragment_fragment_morado, container, false);
     }
 
     // TODO: Rename method, update argument and hook method into UI event
